@@ -3,6 +3,7 @@ package com.example.loginmvvm.view.ui.login;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -17,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.loginmvvm.R;
 import com.example.loginmvvm.databinding.LoginFragmentBinding;
+import com.example.loginmvvm.view.ui.NavigationActivity;
 import com.example.loginmvvm.viewmodel.ViewModelFactory;
 
 public class LoginFragment extends Fragment {
@@ -48,7 +50,9 @@ public class LoginFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 if (!TextUtils.isEmpty(s)) {
-                    Toast.makeText(requireContext(), s, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(requireContext(), s, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getActivity(), NavigationActivity.class);
+                    startActivity(intent);
                 }
             }
         });
