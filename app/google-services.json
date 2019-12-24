@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1007684395870",
+    "firebase_url": "https://qrscanner-9cc27.firebaseio.com",
+    "project_id": "qrscanner-9cc27",
+    "storage_bucket": "qrscanner-9cc27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007684395870:android:b996b9b0f723677497e5cf",
+        "android_client_info": {
+          "package_name": "com.example.studentapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007684395870-6e39lrpf6gkvpbcgul6bjc1bg0rgo1su.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnFSaaFA3vV9NKq2jqK7zqjGtAXdxTKN8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007684395870-6e39lrpf6gkvpbcgul6bjc1bg0rgo1su.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

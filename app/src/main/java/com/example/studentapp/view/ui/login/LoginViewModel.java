@@ -1,4 +1,4 @@
-package com.example.loginmvvm.view.ui.login;
+package com.example.studentapp.view.ui.login;
 
 import android.app.Application;
 
@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.loginmvvm.utils.SingleLiveEvent;
+import com.example.studentapp.utils.SingleLiveEvent;
 
 public class LoginViewModel extends AndroidViewModel {
 

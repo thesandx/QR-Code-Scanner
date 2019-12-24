@@ -1,4 +1,4 @@
-package com.example.loginmvvm.utils;
+package com.example.studentapp.utils;
 
 import android.util.Log;
 

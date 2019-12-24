@@ -1,25 +1,21 @@
-package com.example.loginmvvm.view.ui.login;
-
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+package com.example.studentapp.view.ui.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.example.loginmvvm.R;
-import com.example.loginmvvm.databinding.LoginFragmentBinding;
-import com.example.loginmvvm.view.ui.NavigationActivity;
-import com.example.loginmvvm.viewmodel.ViewModelFactory;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
+
+import com.example.studentapp.databinding.LoginFragmentBinding;
+import com.example.studentapp.view.ui.NavigationActivity;
+import com.example.studentapp.viewmodel.ViewModelFactory;
 
 public class LoginFragment extends Fragment {
 

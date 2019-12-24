@@ -1,4 +1,4 @@
-package com.example.loginmvvm.view.ui.qrscan;
+package com.example.studentapp.view.ui.qrscan;
 
 import androidx.lifecycle.ViewModel;
 

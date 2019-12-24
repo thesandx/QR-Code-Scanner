@@ -1,11 +1,11 @@
-package com.example.loginmvvm.view.ui.login;
+package com.example.studentapp.view.ui.login;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import android.os.Bundle;
-
-import com.example.loginmvvm.R;
+import com.example.studentapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 

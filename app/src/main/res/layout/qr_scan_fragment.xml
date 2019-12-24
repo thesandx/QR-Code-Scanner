@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <variable
-            name="viewmodel"
-            type="com.example.loginmvvm.view.ui.qrscan.QrScanViewModel" />
 
     </data>
 
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".view.ui.qrscan.QrScanFragment">
+        android:layout_height="match_parent">
 
-        <TextView
+
+        <include
+            android:id="@+id/included"
+            layout="@layout/custom_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="50dp"
-            android:text="Hello" />
+            android:layout_height="wrap_content" />
 
-    </FrameLayout>
+        <TextureView
+            android:id="@+id/texture_view"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_margin="30dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,4 +1,4 @@
-package com.example.loginmvvm.viewmodel;
+package com.example.studentapp.viewmodel;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.loginmvvm.view.ui.login.LoginViewModel;
+import com.example.studentapp.view.ui.login.LoginViewModel;
 
 // Factory class for creating viewmodels used in whole application
 public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {

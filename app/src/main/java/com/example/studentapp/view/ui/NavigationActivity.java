@@ -1,4 +1,8 @@
-package com.example.loginmvvm.view.ui;
+package com.example.studentapp.view.ui;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -7,12 +11,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-import com.example.loginmvvm.R;
-import com.example.loginmvvm.view.ui.qrscan.QrScanFragment;
+import com.example.studentapp.R;
+import com.example.studentapp.view.ui.qrscan.QrScanActivity;
+import com.example.studentapp.view.ui.qrscan.QrScanFragment;
 import com.google.android.material.navigation.NavigationView;
 
 public class NavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -36,15 +37,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         navigationView.setNavigationItemSelectedListener(this);
 
 
-        openQrFragment();
-
-
-
-
-
-
-
-
+        // openQrFragment();
 
     }
 
@@ -53,7 +46,9 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.qr_scan) {
-           openQrFragment();
+            Intent intent = new Intent(NavigationActivity.this, QrScanActivity.class);
+            startActivity(intent);
+            // openQrFragment();
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;

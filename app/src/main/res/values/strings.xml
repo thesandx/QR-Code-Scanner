@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">login mvvm</string>
+    <string name="app_name">Student App</string>
     <string name="qr_code">qr scan</string>
     <string name="menu2">login mvvm1</string>
     <string name="drawer_open">Open Drawer</string>
