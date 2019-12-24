@@ -1,7 +1,5 @@
 package com.example.studentapp.view.ui.qrscan;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.graphics.Matrix;
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -24,8 +22,6 @@ import androidx.camera.core.ImageAnalysis;
 import androidx.camera.core.ImageAnalysisConfig;
 import androidx.camera.core.Preview;
 import androidx.camera.core.PreviewConfig;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProviders;
@@ -54,29 +50,19 @@ public class QrScanFragment extends Fragment {
         qrScanFragmentBinding = qrScanFragmentBinding.inflate(inflater, container, false);
 
         qrScanFragmentBinding.included.toolbarTitle.setText("QR Scan");
-        qrScanFragmentBinding.included.backArrow.setOnClickListener(new View.OnClickListener() {
+        qrScanFragmentBinding.included.backArrow.setOnClickListener(v -> QrScanFragment.this.requireActivity().onBackPressed());
+        qrScanFragmentBinding.textureView.post(new Runnable() {
             @Override
-            public void onClick(View v) {
-                requireActivity().onBackPressed();
+            public void run() {
+                QrScanFragment.this.startCamera();
             }
         });
-        if (isCameraPermissionGranted()) {
-            qrScanFragmentBinding.textureView.post(this::startCamera);
-        } else {
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.CAMERA}, REQUEST_CAMERA_PERMISSION);
-        }
 
 
         return qrScanFragmentBinding.getRoot();
 
     }
 
-    private boolean isCameraPermissionGranted() {
-        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            return false;
-        }
-        return true;
-    }
 
     private void startCamera() {
 
@@ -192,18 +178,6 @@ public class QrScanFragment extends Fragment {
         qrScanFragmentBinding.textureView.setTransform(mx);
     }
 
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == REQUEST_CAMERA_PERMISSION) {
-            if (isCameraPermissionGranted()) {
-                qrScanFragmentBinding.textureView.post(this::startCamera);
-            } else {
-                Toast.makeText(requireContext(), "Camera permission is requried", Toast.LENGTH_SHORT).show();
-                requireActivity().finish();
-            }
-        }
-    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
